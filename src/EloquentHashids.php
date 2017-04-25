@@ -31,7 +31,7 @@ trait EloquentHashids
      */
     public static function getHashidSalt(Model $model)
     {
-        return 'table.' . $model->getTable() . '.' . $model->getKey();
+        return env('HASHID_SALT_PREFIX', '') . '.table.' . $model->getTable();
     }
 
     /**
