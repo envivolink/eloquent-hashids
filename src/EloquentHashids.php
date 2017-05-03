@@ -69,4 +69,15 @@ trait EloquentHashids
     {
         return $model->getKey();
     }
+
+    /**
+     * @param $uid
+     * @return \Illuminate\Support\Collection
+     */
+    public static function decodeHashid($uid)
+    {
+        $model = new static();
+        $hashids = new Hashids(static::getHashidSalt($model), static::getHashidLength($model), static::getHashidAlphabet($model));
+        return collect($hashids->decode($uid));
+    }
 }
