@@ -62,6 +62,14 @@ trait EloquentHashids
     }
 
     /**
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'uid';
+    }
+
+    /**
      * @param Model $model
      * @return mixed
      */
