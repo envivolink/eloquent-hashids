@@ -1,5 +1,5 @@
 {
-  "name": "2wmedia/eloquent-hashids",
+  "name": "envivolink/eloquent-hashids",
   "description": "Automatically generate hashids in Laravel for a new Eloquent Model.",
   "keywords": [
     "laravel",
@@ -11,7 +11,7 @@
   "authors": [
     {
       "name": "Michael Naab",
-      "email": "michael.naab@2w.de"
+      "email": "michael.naab@envivo.de"
     }
   ],
   "require": {
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Zwmedia\\EloquentHashids\\": "src/"
+      "EnvivoLink\\EloquentHashids\\": "src/"
     }
   },
   "minimum-stability": "dev"

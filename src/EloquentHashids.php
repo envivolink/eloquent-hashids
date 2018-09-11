@@ -1,4 +1,4 @@
-<?php namespace Zwmedia\EloquentHashids;
+<?php namespace EnvivoLink\EloquentHashids;
 
 use Illuminate\Database\Eloquent\Model;
 use Hashids\Hashids;
