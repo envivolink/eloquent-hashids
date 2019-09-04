@@ -1,7 +1,7 @@
 <?php namespace EnvivoLink\EloquentHashids;
 
-use Illuminate\Database\Eloquent\Model;
 use Hashids\Hashids;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class EloquentHashids
@@ -62,14 +62,6 @@ trait EloquentHashids
     }
 
     /**
-     * @return string
-     */
-    public function getRouteKeyName()
-    {
-        return 'uid';
-    }
-
-    /**
      * @param Model $model
      * @return mixed
      */
@@ -87,5 +79,13 @@ trait EloquentHashids
         $model = new static();
         $hashids = new Hashids(static::getHashidSalt($model), static::getHashidLength($model), static::getHashidAlphabet($model));
         return collect($hashids->decode($uid));
+    }
+
+    /**
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'uid';
     }
 }
